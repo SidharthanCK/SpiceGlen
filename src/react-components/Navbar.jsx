@@ -17,6 +17,7 @@ function Navbar() {
   const [navbarHeight, setNavbarHeight] = useState(80); // default height
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
   const categories = [
     { title: "Fruits & Vegetables", img: "/fruits.png" },
     { title: "Dairy & Eggs", img: "/dairy.png" },
@@ -39,13 +40,11 @@ function Navbar() {
   useEffect(() => {
     const height = navbarRef.current?.offsetHeight;
     setNavbarHeight(height);
-  }, [navbarRef.current?.offsetHeight]);
-
-  console.log(navbarHeight);
+  }, [navbarHeight, navbarRef.current?.offsetHeight]);
 
   return (
     <div ref={navbarRef} className="sticky top-0 z-9999">
-      <nav className="w-full shadow-md px-4 py-3 bg-white flex items-center justify-between relative h-20">
+      <nav className="w-full shadow-md px-4 py-3 bg-white flex items-center justify-between relative h-10">
         {/* Left Icon */}
         <Link to="/">
           <div className="flex items-center gap-2 cursor-pointer">
@@ -143,7 +142,14 @@ function Navbar() {
               </button>
             </DialogTrigger>
             <DialogContent
-              className={`absolute right-0 top-[${navbarHeight}px] w-[400px] translate-0 !left-auto`}
+              className={
+                navbarHeight
+                  ? `absolute top-[${navbarHeight}px] right-0 w-[400px] translate-0 !left-auto`
+                  : `absolute top-[0px] right-0 w-[400px] translate-0 !left-auto`
+              }
+              style={{
+                top: `${navbarHeight}px`,
+              }}
             >
               <DialogHeader>
                 <DialogTitle>
