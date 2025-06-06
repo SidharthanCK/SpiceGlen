@@ -9,7 +9,7 @@ function ProductList() {
       <div className="w-[90%] max-w-[1200px] mx-auto mt-10 mb-4">
         <h1 className="text-3xl font-bold text-center mb-8"> Products List</h1>
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {/* Card 1 */}
           <div className="border rounded-lg shadow-md p-4 pt-6 flex flex-col items-center relative">
             <Link to="/singleproductlist">

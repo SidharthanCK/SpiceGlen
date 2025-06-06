@@ -44,7 +44,7 @@ function Navbar() {
 
   return (
     <div ref={navbarRef} className="sticky top-0 z-9999">
-      <nav className="w-full shadow-md px-4 py-3 bg-white flex items-center justify-between relative h-10">
+      <nav className="w-full shadow-md px-4 py-3 bg-white flex items-center justify-between relative h-40">
         {/* Left Icon */}
         <Link to="/">
           <div className="flex items-center gap-2 cursor-pointer">
