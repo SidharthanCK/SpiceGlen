@@ -9,7 +9,7 @@ function ProductList() {
       <div className="w-[90%] max-w-[1200px] mx-auto mt-10 mb-4">
         <h1 className="text-3xl font-bold text-center mb-8"> Products List</h1>
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-6">
           {/* Card 1 */}
           <div className="border rounded-lg shadow-md p-4 pt-6 flex flex-col items-center relative">
             <Link to="/singleproductlist">
@@ -28,6 +28,7 @@ function ProductList() {
                 fontSize: "20px",
                 borderRadius: "10px",
                 marginTop: "10px",
+                padding:"8px"
               }}
             >
              <Link to="/cartpage">
@@ -51,6 +52,7 @@ function ProductList() {
                 fontSize: "20px",
                 borderRadius: "10px",
                 marginTop: "10px",
+                padding:"8px"
               }}
             >
               Add To cart
@@ -73,6 +75,7 @@ function ProductList() {
                 fontSize: "20px",
                 borderRadius: "10px",
                 marginTop: "10px",
+                padding:"8px"
               }}
             >
               Add To cart
@@ -86,7 +89,7 @@ function ProductList() {
               alt="Product"
               className="w-full h-40 object-cover mb-4 rounded"
             />
-            <h3 className="text-lg font-semibold mb-2">Product 4</h3>
+            <h3 className="text-lg font-semibold mb-2 items-start">Product 4</h3>
             <p className="text-green-600 font-medium">₹199</p>
             <button
               style={{
@@ -95,6 +98,7 @@ function ProductList() {
                 fontSize: "20px",
                 borderRadius: "10px",
                 marginTop: "10px",
+                padding:"8px"
               }}
             >
               Add To cart

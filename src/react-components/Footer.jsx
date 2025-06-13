@@ -68,7 +68,7 @@ function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-[#444] mt-10 pt-4 flex flex-col md:flex-row justify-between items-center text-sm">
+      <div className="border-t border-[#444] mt-10 pt-4 flex flex-col   items-center text-sm">
         <p>@2025 Spice Glen.</p>
         <div className="flex gap-4 mt-2 md:mt-0">
           <a href="#">Privacy Policy</a>

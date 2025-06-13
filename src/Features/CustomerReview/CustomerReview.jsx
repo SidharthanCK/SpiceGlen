@@ -22,9 +22,9 @@ function CustomerReview() {
             </div>
 
             {/* Product Title */}
-            <h3 className="text-sm font-medium mb-2 mt-2">
+            <h1 className="text-sm  mb-2 mt-2 font-bold">
               Spice Glen Traditional spices [Premium]
-            </h3>
+            </h1>
 
             {/* Star Ratings */}
             <div className="text-yellow-500 mb-2">

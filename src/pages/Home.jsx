@@ -22,13 +22,13 @@ function Home() {
       <Navbar />
       {/* Swiper Carousel */}
       <div className="flex justify-center items-center mt-6">
-        <div className="w-[90%] max-w-[1700px] h-[50vh]">
+        <div className="w-[90%] max-w-[1300px]">
           <Swiper
             modules={[Autoplay, Pagination]}
             autoplay={{ delay: 2000 }}
             loop={true}
             pagination={{ clickable: true }}
-            className="rounded-xl h-[300px]"
+            className="rounded-xl h-[200px] sm:h-[400px]"
           >
             <SwiperSlide className=" rounded-xl">
               <img

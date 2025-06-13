@@ -27,42 +27,54 @@ function ShopByCategories() {
   ];
   return (
     <div>
-      <div className="w-[90%] max-w-[100%] mx-auto mt-2 mb-1">
+      <div className="w-[80%] max-w-[100%] mx-auto mt-10 mb-1">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-2xl font-bold" style={{fontSize:"30px"}}>Shop By Categories</h2>
-           <button  onClick={() => setIsModalOpen(true)} className="bg-green-200 hover:bg-green-300 text-black font-medium py-3 px-6 rounded-full shadow-sm transition duration-300">
+           <button  onClick={() => setIsModalOpen(true)} className="bg-green-200 hover:bg-green-300 text-black font-medium py-3 px-6 rounded-full shadow-sm transition duration-300" style={{backgroundColor:"#9cc797"}}>
         View All
       </button>
         </div>
         {/* Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50" style={{marginTop:"100px"}}>
-          <div className="bg-white w-[90%] max-w-6xl h-[90vh] rounded-lg shadow-lg p-6 overflow-y-auto relative z-9999">
-            <button
-              className="absolute top-4 right-4 text-2xl"
-              onClick={() => setIsModalOpen(false)}
-            >
-              &times;
-            </button>
-            <h2 className="text-2xl font-bold mb-6">All Categories</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {categories.map((cat, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-100 p-4 rounded-lg shadow hover:shadow-md transition text-center"
-                >
-                  <img
-                    src={CategoryImg}
-                    alt={cat.title}
-                    className="w-20 h-20 object-contain mx-auto mb-4"
-                  />
-                  <p className="font-medium">{cat.title}</p>
-                </div>
-              ))}
+     {isModalOpen && (
+  <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/40 backdrop-blur-sm transition-opacity duration-300">
+    {/* Modal container */}
+    <div className="bg-white w-[95%] max-w-6xl h-[90vh] mt-24 rounded-2xl shadow-2xl p-6 sm:p-8 overflow-y-auto relative animate-fade-in">
+      
+      {/* Close button */}
+      <button
+        className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-red-500 transition"
+        onClick={() => setIsModalOpen(false)}
+        aria-label="Close"
+      >
+        &times;
+      </button>
+
+      {/* Heading */}
+      <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-gray-800">
+        All Categories
+      </h2>
+
+      {/* Category Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {categories.map((cat, index) => (
+          <Link to="/subcategory" key={index}>
+            <div className="bg-gray-100 hover:bg-white border hover:border-gray-300 transition-all duration-200 p-6 rounded-xl shadow-sm hover:shadow-md text-center group">
+              <img
+                src={CategoryImg}
+                alt={cat.title}
+                className="w-20 h-20 object-contain mx-auto mb-4 transition-transform duration-200 group-hover:scale-105"
+              />
+              <p className="font-semibold text-gray-700 group-hover:text-blue-600">
+                {cat.title}
+              </p>
             </div>
-          </div>
-        </div>
-      )}
+          </Link>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
         <div
           className="  mx-auto mt-8 mb-3"
           style={{ backgroundColor: "white", width: "100%",borderRadius:"5px" }}
