@@ -4,9 +4,9 @@ function CustomerReview() {
   return (
     <div>
       <div className="text-center py-10 px-4">
-      <h2 className="text-3xl font-semibold mb-10">Customer Says..!</h2>
+      <h2 className="text-3xl font-semibold mb-20">Customer Says..!</h2>
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-12">
         {[...Array(5)].map((_, index) => (
           <div
             key={index}

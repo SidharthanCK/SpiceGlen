@@ -107,7 +107,7 @@ const totalAmount=(refAmount*count).toFixed(3)
           </h1>
           <hr />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 my-5 mx-auto p-10">
-            <div className="w-80 mx-auto" >
+            <div className="w-60 lg:w-75 mx-auto" >
               {/* rltd product card */}
               <Card>
                 <CardHeader>
@@ -127,7 +127,7 @@ const totalAmount=(refAmount*count).toFixed(3)
                 </CardFooter>
               </Card>
             </div>
-              <div className="w-80 mx-auto" >
+              <div className="w-60 lg:w-75 mx-auto" >
               {/* rltd product card */}
               <Card>
                 <CardHeader>
@@ -147,7 +147,7 @@ const totalAmount=(refAmount*count).toFixed(3)
                 </CardFooter>
               </Card>
             </div>
-             <div className="w-80 mx-auto" >
+             <div className="w-60 lg:w-75 mx-auto" >
               {/* rltd product card */}
               <Card>
                 <CardHeader>

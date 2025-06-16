@@ -90,21 +90,25 @@ function Navbar() {
   return (
     // Main container for the navbar, set to sticky for fixed position on scroll
     <div ref={navbarRef} className="sticky top-0 z-[9999]">
-      <nav className="w- shadow-md px-3 sm:px-6 py-3 bg-white flex items-center justify-between relative h-20">
+      <nav className="shadow-md gap-1 px-3 sm:px-6 py-3 bg-white flex items-center justify-between relative h-20">
         {/* Logo & Location Section */}
-        <div className="flex items-center mx-2 sm:mx-6 md:mx-20">
-          <Link to="/">
-            <img
-              src={icon}
-              alt="Logo"
-              className="h-14 sm:h-14 md:h-16 w-auto cursor-pointer" // Responsive image sizing
-            />
-          </Link>
+        <div className="flex items-center">
+          <div className="w-28 h-full">
+            <Link to="/">
+              <img
+                src={icon}
+                alt="Logo"
+                className="w-full h-full cursor-pointer" // Responsive image sizing
+              />
+            </Link>
+          </div>
+
           <button
             style={{ backgroundColor: "#9cc797" }} // Inline style for background color
             className="flex items-center gap-2 ml-2 sm:ml-3 rounded-full text-black px-3 sm:px-4 py-2 text-sm shadow-md"
           >
-            <i className="fa-solid fa-location-dot"></i> {/* Font Awesome icon */}
+            <i className="fa-solid fa-location-dot"></i>{" "}
+            {/* Font Awesome icon */}
             <h2 className="ml-1 sm:ml-2 text-sm">UAE</h2>
           </button>
         </div>
@@ -125,7 +129,7 @@ function Navbar() {
         </div>
 
         {/* Desktop Icons (Categories, Cart, Profile - hidden on mobile, visible from md breakpoint) */}
-        <div className="hidden md:flex items-center gap-5 lg:gap-8 md:mx-10 lg:mx-20">
+        <div className="hidden md:flex items-center gap-5 lg:gap-8">
           {/* Categories Button - opens the Categories modal */}
           <button
             onClick={() => setIsOpen(true)}
@@ -334,7 +338,7 @@ function Navbar() {
       {/* Categories Modal (full screen overlay, visible when isOpen is true) */}
       {isOpen && (
         <div className="fixed inset-0 z-[9998] flex items-center justify-center bg-black/40 backdrop-blur-sm">
-          <div className="relative w-[95%] max-w-3xl max-h-[85vh] bg-white rounded-2xl shadow-xl p-6 sm:p-8 overflow-y-auto">
+          <div className="relative w-full h-full sm:w-[95%] sm:h-[95%]  max-w-none max-h-none  bg-white sm:rounded-2xl shadow-xl p-6 sm:p-8 overflow-y-auto">
             {/* Close button for Categories modal */}
             <button
               onClick={() => setIsOpen(false)}
@@ -347,7 +351,7 @@ function Navbar() {
               Explore Categories
             </h2>
             {/* Grid of category items */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {categories.map((cat, index) => (
                 <Link to="/subcategory" key={index}>
                   <div className="flex items-center justify-between p-4 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 transition duration-200 cursor-pointer group">

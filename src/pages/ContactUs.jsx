@@ -9,7 +9,7 @@ function ContactUs() {
 
       {/* pages */}
       <div
-        className="text-sm mb-6 flex items-center space-x-2 text-gray-600 ml-20 "
+        className="text-sm mb-6 flex items-center space-x-2 text-gray-600 px-4 md:px-8 lg:px-20  "
         style={{ border: "1px 1px solid gray" }}
       >
         <span
@@ -42,8 +42,8 @@ function ContactUs() {
         </div>
       </div>
       {/* contact details */}
-       <div className="bg-white p-6 rounded-lg shadow-sm max-w-md ml-20">
-      <h2 className="text-lg font-semibold mb-4">Get in Touch</h2>
+       <div className="bg-white p-6 rounded-lg shadow-sm max-w-md px-4, md:px-8, lg:px-20">
+      <h2 className="text-xl font-semibold mb-4">Get in Touch</h2>
 
       {/* Address */}
       <div className="flex items-start space-x-3 mb-4">
@@ -51,8 +51,8 @@ function ContactUs() {
           <MapPin className="text-teal-500 w-5 h-5" />
         </div>
         <div>
-          <p className="text-sm font-medium">Address</p>
-          <p className="text-sm text-gray-700">
+          <p className="text-lg font-medium">Address</p>
+          <p className="text-lg text-gray-700">
             Al gazelle building, Khalifa park, Abu dhabi
           </p>
         </div>
@@ -64,10 +64,10 @@ function ContactUs() {
           <Mail className="text-teal-500 w-5 h-5" />
         </div>
         <div>
-          <p className="text-sm font-medium">Email</p>
+          <p className="text-lg font-medium break-words">Email</p>
           <a
             href="mailto:primeselect.uae@gmail.com"
-            className="text-sm text-teal-600 hover:underline"
+            className="text-lg text-teal-600 hover:underline"
           >
             spiceglen@gmail.com
           </a>
@@ -80,10 +80,10 @@ function ContactUs() {
           <Phone className="text-teal-500 w-5 h-5" />
         </div>
         <div>
-          <p className="text-sm font-medium">Phone</p>
+          <p className="text-lg font-medium">Phone</p>
           <a
             href="tel:+971585860577"
-            className="text-sm text-teal-600 hover:underline"
+            className="text-lg text-teal-600 hover:underline"
           >
             +971585860577
           </a>

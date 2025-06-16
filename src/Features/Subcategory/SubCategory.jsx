@@ -15,7 +15,7 @@ const categories = [
 const products = [
   {
     name: "Dettol Antibacterial Antiseptic Disinfectant...",
-    price: "28.5 ",
+    price: "28.5  AED",
     image: "/images/dettol.png",
   },
   {

@@ -28,11 +28,10 @@ function ProductList() {
                 fontSize: "20px",
                 borderRadius: "10px",
                 marginTop: "10px",
-                padding:"8px"
+                padding: "8px",
               }}
             >
-             <Link to="/cartpage">
-              Add To cart</Link>
+              <Link to="/cartpage">Add To cart</Link>
             </button>
           </div>
 
@@ -52,7 +51,9 @@ function ProductList() {
                 fontSize: "20px",
                 borderRadius: "10px",
                 marginTop: "10px",
-                padding:"8px"
+                padding: "8px",
+                color: "white",
+                fontWeight: "600",
               }}
             >
               Add To cart
@@ -75,7 +76,7 @@ function ProductList() {
                 fontSize: "20px",
                 borderRadius: "10px",
                 marginTop: "10px",
-                padding:"8px"
+                padding: "8px",
               }}
             >
               Add To cart
@@ -89,7 +90,9 @@ function ProductList() {
               alt="Product"
               className="w-full h-40 object-cover mb-4 rounded"
             />
-            <h3 className="text-lg font-semibold mb-2 items-start">Product 4</h3>
+            <h3 className="text-lg font-semibold mb-2 items-start">
+              Product 4
+            </h3>
             <p className="text-green-600 font-medium">₹199</p>
             <button
               style={{
@@ -98,7 +101,7 @@ function ProductList() {
                 fontSize: "20px",
                 borderRadius: "10px",
                 marginTop: "10px",
-                padding:"8px"
+                padding: "8px",
               }}
             >
               Add To cart

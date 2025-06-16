@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 
 function ContactUs() {
   return (
-   <div className="text-center py-10 px-4 my-40">
+   <div className="text-center py-10 px-4 my-20">
       <h1 className="text-3xl md:text-4xl font-bold mb-4">
         Make every Spices special with Spice Glen.!
       </h1>
